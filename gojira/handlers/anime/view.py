@@ -150,7 +150,11 @@ async def anime_view(
         )
         return
 
-    photo = f"https://img.anili.st/media/{anime["id"]}"
+    if "Hentai" in anime["genres"] or "Ecchi" in anime["genres"]:
+        photo = f"https://play-lh.googleusercontent.com/KuM9arYZ6Oq2NzNDyyOK6Nk0ebMABOcQ8FxoMKT_CT2QOz7qMJYx_z7LmP5PZe5g08Q"
+    else:
+        photo = f"https://img.anili.st/media/{anime["id"]}"
+
 
     studios = []
     producers = []
